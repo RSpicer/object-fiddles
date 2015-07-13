@@ -207,11 +207,12 @@ var user = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   //Code Here
-
+  user.name = "Tyler S. McGinnis";
+  user.email = "tyle.mcginnis@devmounta.in";
 //Now call the sayName method that's on the user object which will alert the users email
 
   //Code Here
-
+user.sayName();
 
 
 
@@ -223,17 +224,24 @@ var user = {
 //Create an empty object called methodCollection.
 
   //Code Here
+  var methodCollection = {};
 
 /*Now add two methods (functions that are properties on objects) to your methodCollection
 object. One called 'alertHello' which alerts 'hello' and another method called logHello
  which logs 'hello' to the console. */
 
   //Code Here
-
+  methodCollection.alertHello = function (){
+  	alert("Hello!");
+  }
+  methodCollection.logHello = function(){
+  	console.log("Hello!");
+  };
 //Now call your alertHello and logHello methods.
 
   //Code Here
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 //NEXT PROBLEM
@@ -243,6 +251,13 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
   //Code Here
+  function MakePerson(name, birthday, ssn) {
+  	var newPerson = {};
+  	newPerson["name"] = name;
+  	newPerson["birthday"] = birthday;
+  	newPerson["ssn"] = ssn;
+  	return newPerson;
+  }
 
 
 
@@ -253,7 +268,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called MakeCard which takes in all the data it needs to make a Credit Card object and returns that object so that whenever you invoke MakeCard, you get a brand new credit card.
 
   //Code Here
-  
+  function MakeCard(name, expDate, ccNumber, secCode){
+    var newPerson = {};
+  	newPerson["name"] = name;
+  	newPerson["expDate"] = expDate;
+  	newPerson["ccNumber"] = ccNumber;
+  	newPerson["secCode"] = secCode;
+  	return newPerson;	
+  }
   
   
 //NEXT PROBLEM
@@ -266,5 +288,15 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 */
 
   //Code Here
-
+function bindCard(newPerson, newCard){
+	var newAcnt = {};
+	for (var key in newPerson)
+	{
+		newAcnt[key] = newPerson[key];
+	}
+	for (var key in newCard){
+		newAcnt[key] = newCard[key];
+	}
+	return newAcnt;
+}
 
