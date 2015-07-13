@@ -85,12 +85,23 @@ console.log(backPack);
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
+  var me = {
+  	name: "Ryan",
+  	age: 22,
+  	height: "6 foot 1",
+  	gender: "Male",
+  	married: "No",
+  	eyeColor: "Blue",
+  	hairColor: "Brown"
+  };
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
   //Code Here
 
-
+for(var key in me){
+	console.log(me[key]);
+}
 
 
 //NEXT PROBLEM
@@ -101,11 +112,20 @@ console.log(backPack);
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
   //Code Here
+  var album = {
+  	"Stolen": "2:43",
+  	"The Dota 2 Blues": "3:22",
+  	"Internationally Known": "4:55",
+  	"A TRIBUTE": "6:54",
+  	"To Isengard": "3:20"
+  };
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
-
+for(var key in album){
+	alert(key);
+}
 
 
 
@@ -117,10 +137,22 @@ console.log(backPack);
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
+  var states = {
+  	Nevada: 3232,
+  	Georgia: 4444,
+  	Utah: 12000,
+  	Maryland: 300000,
+  	"New Mexico": 2000
+	};
 
 //Now, loop through your states object and if the states population is greater than 30K, alert that state.
 
   //Code Here
+  for(var key in states){
+  	if(states[key] > 30000){
+  		alert(key);
+  	}
+  }
 
 
 
@@ -142,12 +174,17 @@ var user = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
+  for(var key in user){
+  	if(!user[key]){
+  		delete user[key];
+  	}
+  }
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
-
-
+  user.name = "Ryan";
+  user.username = "Novu";
 
 
 //NEXT PROBLEM
